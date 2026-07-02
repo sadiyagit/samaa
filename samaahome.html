@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAMAA One Page Ad</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: linear-gradient(135deg, #fff7f2 0%, #fff0f5 45%, #f8f2ff 100%);
+      color: #4a2f35;
+      min-height: 100vh;
+      padding: 32px;
+    }
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.78);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(153, 92, 122, 0.12);
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(131, 76, 105, 0.14);
+    }
+    .hero {
+      background: linear-gradient(135deg, #d96c75 0%, #f2b880 48%, #a687d6 100%);
+      color: white;
+      padding: 58px 60px 42px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before, .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.18);
+      filter: blur(8px);
+    }
+    .hero::before { width: 240px; height: 240px; top: -80px; right: -40px; }
+    .hero::after { width: 180px; height: 180px; bottom: -70px; left: -20px; }
+    .brand-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.26);
+      padding: 9px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 74px;
+      margin: 0;
+      line-height: 0.95;
+    }
+    .subtitle {
+      font-size: 24px;
+      font-weight: 700;
+      margin-top: 12px;
+    }
+    .tagline {
+      margin-top: 16px;
+      font-size: 18px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      opacity: 0.96;
+    }
+    .intro {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 28px;
+      padding: 34px 40px 18px;
+    }
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,248,250,0.93));
+      border: 1px solid rgba(185, 118, 135, 0.12);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: 0 14px 30px rgba(131, 76, 105, 0.08);
+    }
+    .card h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      margin: 0 0 12px;
+      color: #9a4f65;
+    }
+    .card p {
+      margin: 0;
+      line-height: 1.8;
+      font-size: 15.5px;
+      color: #6d4a53;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      padding: 10px 40px 16px;
+    }
+    .mini h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #7b4b82;
+    }
+    ul {
+      margin: 0;
+      padding-left: 18px;
+      line-height: 1.8;
+      color: #6d4a53;
+      font-size: 15px;
+    }
+    .bottom {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      padding: 0 40px 34px;
+    }
+    .highlight {
+      background: linear-gradient(135deg, rgba(217,108,117,0.10), rgba(242,184,128,0.18), rgba(166,135,214,0.12));
+      border: 1px solid rgba(185, 118, 135, 0.12);
+      border-radius: 22px;
+      padding: 24px;
+    }
+    .highlight h2 {
+      font-family: 'Playfair Display', serif;
+      margin: 0 0 12px;
+      font-size: 28px;
+      color: #9a4f65;
+    }
+    .highlight p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.8;
+      color: #6d4a53;
+    }
+    .closing {
+      margin-top: 18px;
+      text-align: center;
+      padding: 24px 30px 36px;
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: #8a4a5d;
+    }
+    @media (max-width: 900px) {
+      .intro, .grid, .bottom { grid-template-columns: 1fr; }
+      h1 { font-size: 54px; }
+      .hero { padding: 42px 28px 34px; }
+      .intro, .grid, .bottom { padding-left: 24px; padding-right: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="hero">
+      <div class="brand-tag">Women’s Wear Brand</div>
+      <h1>SAMAA</h1>
+      <div class="subtitle">Comfy-Stylish Clothing</div>
+      <div class="tagline">Look Stylish. Feel Comfortable.</div>
+    </section>
+
+    <section class="intro">
+      <div class="card">
+        <h2>Brand Story</h2>
+        <p>SAMAA was created for women who still love dressing beautifully, but now want comfort to be part of that style. Especially after 30, clothing should not only look elegant — it should also feel soft, practical, flattering, and effortless to wear through everyday life.</p>
+      </div>
+      <div class="card">
+        <h2>Mission</h2>
+        <p>To empower women of every age to feel confident, stylish, and comfortable through thoughtfully designed clothing that combines graceful silhouettes with everyday ease.</p>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card mini">
+        <h2>Why SAMAA?</h2>
+        <ul>
+          <li>Comfort-first design</li>
+          <li>Timeless style, not fast fashion</li>
+          <li>Practical everyday elegance</li>
+          <li>Inclusive and flattering silhouettes</li>
+          <li>Quality with a soft feminine touch</li>
+        </ul>
+      </div>
+      <div class="card mini">
+        <h2>Signature Features</h2>
+        <ul>
+          <li>Relaxed fit</li>
+          <li>Relaxed sleeves</li>
+          <li>Comfort pants</li>
+          <li>Pockets</li>
+          <li>Easy-care everyday wear</li>
+        </ul>
+      </div>
+      <div class="card mini">
+        <h2>Signature Styles</h2>
+        <ul>
+          <li>Shirt kurtas</li>
+          <li>Panelled kurtas</li>
+          <li>A-line kurtas and dresses</li>
+          <li>Tunics and longline tops</li>
+          <li>Occasion-ready capsules</li>
+        </ul>
+      </div>
+      <div class="card mini">
+        <h2>Who It’s For</h2>
+        <ul>
+          <li>Women aged 30–55</li>
+          <li>Women who want style without discomfort</li>
+          <li>Women who value modest elegance</li>
+          <li>Women looking for flattering daily wear</li>
+          <li>Women of every age who love ease and grace</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="bottom">
+      <div class="highlight">
+        <h2>Brand Promise</h2>
+        <p>SAMAA brings together style, softness, confidence, and function in one wardrobe. Every piece is designed to make dressing feel lighter, easier, and more beautiful.</p>
+      </div>
+      <div class="highlight">
+        <h2>Partner Appeal</h2>
+        <p>SAMAA speaks to a growing audience of women seeking modern Indian wear that is wearable, elegant, and emotionally relatable — a brand built on real lifestyle needs, not just trends.</p>
+      </div>
+    </section>
+
+    <div class="closing">SAMAA is not just clothing — it is comfort, confidence, and style woven into everyday life.</div>
+  </div>
+</body>
+</html>
